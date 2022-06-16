@@ -1,0 +1,16 @@
+{
+  "name": "1-intro-to-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index_demo.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

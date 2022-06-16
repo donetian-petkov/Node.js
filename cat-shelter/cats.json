@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Pretty Kitty",
+    "imageUrl": "https://cdn.pixabay.com/photo/2018/08/08/05/12/cat-3591348_1280.jpg",
+    "price": 350,
+    "breed": "Bombay Cat",
+    "description": "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho."
+  },
+  {
+    "name": "Pesho",
+    "imageUrl": "https://cdn.pixabay.com/photo/2018/08/08/05/12/cat-3591348_1280.jpg",
+    "price": 450,
+    "breed": "Bombay Cat",
+    "description": "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho."
+  },
+  {
+    "name": "Gosho",
+    "imageUrl": "https://cdn.pixabay.com/photo/2018/08/08/05/12/cat-3591348_1280.jpg",
+    "price": 550,
+    "breed": "Bombay Cat",
+    "description": "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho."
+  },
+  {
+    "name": "Tosho",
+    "imageUrl": "https://cdn.pixabay.com/photo/2018/08/08/05/12/cat-3591348_1280.jpg",
+    "price": 650,
+    "breed": "Bombay Cat",
+    "description": "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho."
+  }
+]
