@@ -29,5 +29,12 @@
         "description": "https://static3.depositphotos.com/1003836/254/i/950/depositphotos_2542915-stock-photo-rubic-cube.jpg",
         "imageUrl": "https://static3.depositphotos.com/1003836/254/i/950/depositphotos_2542915-stock-photo-rubic-cube.jpg",
         "difficultyLevel": "5"
+    },
+    {
+        "id": 5,
+        "name": "new cube",
+        "description": "testing",
+        "imageUrl": "https://thumbs.dreamstime.com/b/rubik-s-cube-more-like-puzzle-gamefor-adults-than-toy-children-solved-rubiks-white-background-84651599.jpg",
+        "difficultyLevel": "1"
     }
 ]
