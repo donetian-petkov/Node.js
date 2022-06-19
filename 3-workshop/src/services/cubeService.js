@@ -12,3 +12,5 @@ exports.save = (cube) => {
    return fs.writeFile(path.resolve('db.json'), textData);
 
 }
+
+exports.getOne = (cubeId) => cubes[cubeId];
