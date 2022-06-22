@@ -15,7 +15,7 @@ router.post('/create', (req, res) => {
     }
 
     //Saves data:
-    cubeService.save(cube)
+    cubeService.create(cube)
         .then(() => {
             // Redirect to page:
             res.redirect('/');
@@ -26,9 +26,9 @@ router.post('/create', (req, res) => {
 
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
 
-    const cube = cubeService.getOne(req.params.id);
+    const cube = await cubeService.getOne(req.params.id);
 
     res.render('details', { cube });
 })

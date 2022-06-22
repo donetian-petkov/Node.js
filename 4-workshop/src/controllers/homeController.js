@@ -9,13 +9,13 @@ exports.about = (req, res) => {
     res.render('about');
 }*/
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
 
     let querystring = req.query;
 
     let { search, from, to } = querystring;
 
-    const cubes = cubeService.getAll(search, from, to);
+    const cubes = await cubeService.getAll(search, from, to);
 
     res.render('index', { cubes, search, from, to });
 });
