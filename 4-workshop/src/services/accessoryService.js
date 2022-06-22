@@ -5,3 +5,5 @@ exports.create = (accessoryData) => {
 }
 
 exports.getAll = () => Accessory.find();
+
+exports.getAllAvailable = (ids) => Accessory.find({_id: {$nin: ids}});
