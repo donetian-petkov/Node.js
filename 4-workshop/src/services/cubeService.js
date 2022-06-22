@@ -2,6 +2,7 @@
 const path = require("path");*/
 /*const cubes = require("../db.json");*/
 const Cube = require("../models/Cube");
+const Accessory = require("../models/Accessory");
 
 
 /*exports.save = (cube) => {
@@ -33,3 +34,19 @@ exports.getAll = async (search = '', fromInput, toInput) => {
 
     return cubes;
 };
+
+exports.attachAccessory = async (cubeId, accessoryId) => {
+
+   const cube = await Cube.findById(cubeId);
+   const accessory = await Accessory.findById(accessoryId);
+
+   cube.accessories.push(accessory);
+
+   accessory.cubes.push(cube);
+
+   await cube.save();
+   await accessory.save();
+
+   return cube;
+
+}
