@@ -29,14 +29,14 @@ router.post('/create', (req, res) => {
 
 router.get('/:id', async (req, res) => {
 
-    const cube = await cubeService.getOne(req.params.id);
+    const cube = await cubeService.getOne(req.params.id).lean();
 
     res.render('details', { cube });
 });
 
 router.get('/:cubeId/attach-accessory', async (req, res) => {
 
-    const cube = await cubeService.getOne(req.params.cubeId);
+    const cube = await cubeService.getOne(req.params.cubeId).lean();
     const accessories = await accessoryService.getAll().lean();
 
     res.render('attachAccessory', { cube, accessories });
@@ -48,7 +48,7 @@ router.post('/:cubeId/attach-accessory', async (req,res) => {
     await cubeService.attachAccessory(req.params.cubeId, accessoryId);
 
     res.redirect(`/cube/${req.params.cubeId}`);
-})
+});
 
 
 module.exports = router;

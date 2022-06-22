@@ -19,7 +19,7 @@ exports.create = (cube) => Cube.create(cube);
 
 /*exports.getOne = (cubeId) => cubes[cubeId];*/
 
-exports.getOne = async (cubeId) => await Cube.findById(cubeId).lean();
+exports.getOne = (cubeId) => Cube.findById(cubeId).populate('accessories'); // along with cube generation generate the set relations
 
 exports.getAll = async (search = '', fromInput, toInput) => {
 

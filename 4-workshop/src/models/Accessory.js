@@ -12,7 +12,7 @@ const accessorySchema = new mongoose.Schema({
            /* function() {
                 return this.imageUrl.startsWith('http')
             }*/
-            validator: /^http/g,
+            validator: /^https?/g,
             message: 'ImageUrl should start with http'
         }
     },
