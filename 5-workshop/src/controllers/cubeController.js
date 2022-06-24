@@ -1,12 +1,13 @@
 const router = require('express').Router();
 const cubeService = require("../services/cubeService");
 const accessoryService = require("../services/accessoryService");
+const { isAuth } = require('../middlewares/authMiddleware');
 
-router.get('/create', (req, res) => {
+router.get('/create', isAuth, (req, res) => {
     res.render('create');
 });
 
-router.post('/create', (req, res) => {
+router.post('/create', isAuth, (req, res) => {
     const cube = req.body;
 
     // Validation
@@ -50,5 +51,25 @@ router.post('/:cubeId/attach-accessory', async (req,res) => {
     res.redirect(`/cube/${req.params.cubeId}`);
 });
 
+router.get('/:cubeId/edit', async (req, res) => {
+
+
+    const cube = await cubeService.getOne(req.params.cubeId).lean();
+    cube[`difficultyLevel${cube.difficultyLevel}`] = true;
+
+    if(!cube) {
+        res.redirect('/404');
+    }
+
+    res.render('cube/editCubePage', { cube });
+});
+
+router.post('/:cubeId/edit', async (req, res) => {
+
+    let editedCube = await cubeService.edit(req.params.cubeId, req.body);
+
+
+    res.redirect(`/cube/${editedCube._id}`);
+});
 
 module.exports = router;
