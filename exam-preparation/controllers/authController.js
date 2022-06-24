@@ -1,30 +1,35 @@
 const router = require('express').Router();
 const authService = require('../services/authService');
 const { SESSION_NAME } = require('../config/env');
-const {isAuth} = require("../middlewares/authMiddleware");
+const {isAuth, isGuest} = require("../middlewares/authMiddleware");
+const { errorMapper } = require('../utils/errorMapper');
 
-router.get('/login', (req,res) => {
+router.get('/login', isGuest,(req,res) => {
     res.render('auth/login');
 });
 
-router.post('/login', async (req,res) => {
+router.post('/login', isGuest, async (req,res) => {
 
     const { username, password } = req.body;
 
-    const user = await authService.login(username, password);
-    const token = await authService.createToken(user);
+    try {
+        const user = await authService.login(username, password);
+        const token = await authService.createToken(user);
 
-    res.cookie(SESSION_NAME, token, {httpOnly: true});
+        res.cookie(SESSION_NAME, token, {httpOnly: true});
 
-    res.redirect('/');
+        res.redirect('/');
+    } catch (error) {
+        res.render('auth/login', {error: errorMapper(error)});
+    }
 
 });
 
-router.get('/register', (req,res) => {
+router.get('/register', isGuest, (req,res) => {
     res.render('auth/register');
 });
 
-router.post('/register', async (req,res) => {
+router.post('/register', isGuest, async (req,res) => {
 
     const { username, password, repeatPassword, address } = req.body;
 
@@ -40,7 +45,7 @@ router.post('/register', async (req,res) => {
         res.cookie(SESSION_NAME, token, {httpOnly: true});
         res.redirect('/');
     } catch (error) {
-        return res.render('auth/register', { error: 'db error'});
+        return res.render('auth/register', { error: errorMapper(error)});
     }
 });
 
