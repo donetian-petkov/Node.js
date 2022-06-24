@@ -33,7 +33,7 @@ router.get('/:id', async (req, res) => {
 
     const cube = await cubeService.getOneDetails(req.params.id).lean();
 
-    const isOwner = cube.owner.toString() == req.user?._id;
+    const isOwner = cube.owner == req.user?._id;
 
     res.render('details', { cube, isOwner });
 });
