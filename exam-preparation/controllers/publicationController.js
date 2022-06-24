@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { isAuth } = require('../middlewares/authMiddleware');
 const publicationService = require('../services/publicationService');
 const {errorMapper} = require("../utils/errorMapper");
+const { preloadPublication, isAuthor } = require('../middlewares/publicationMiddlewares')
 
 router.get('/', async (req,res) => {
 
@@ -20,26 +21,30 @@ router.get('/:publicationId/details', async (req,res) => {
 
 });
 
-router.get('/:publicationId/edit', isAuth, async (req,res, next) => {
+router.get('/:publicationId/edit', isAuth, preloadPublication, isAuthor, async (req,res, next) => {
 
-    const publication = await publicationService.getOne(req.params.publicationId).lean();
-
-    if (publication.author != req.user._id) {
-
-        return next({message: 'You are not authorised!', status: 401});
-
-    }
-
-    res.render('publication/edit', { ...publication });
-
+    res.render('publication/edit', { ...req.publication });
 
 });
 
-router.post('/:publicationId/edit', async (req, res, next) => {
+router.post('/:publicationId/edit', isAuth, preloadPublication, isAuthor, async (req, res, next) => {
 
-    await publicationService.update(req.params.publicationId, req.body);
+    try {
+        await publicationService.update(req.params.publicationId, req.body);
 
-    res.redirect(`/publications/${req.params.publicationId}/details`);
+        res.redirect(`/publications/${req.params.publicationId}/details`);
+    } catch (err) {
+        res.render('publication/edit', {...req.body, error: errorMapper(err)});
+    }
+
+});
+
+router.post('/:publicationId/delete', isAuth, preloadPublication, isAuthor, async (req, res) => {
+
+    await publicationService.delete(req.params.publicationId);
+
+    res.render('publication/edit')
+
 
 })
 
@@ -54,7 +59,7 @@ router.post('/create', isAuth, async (req, res) => {
         const createdPublication = await publicationService.create(publicationData);
         res.redirect('/publications')
     } catch (error) {
-        res.render('publication/create', {error: errorMapper(error)});
+        res.render('publication/create', {...req.body, error: errorMapper(error)});
     }
 
 })
