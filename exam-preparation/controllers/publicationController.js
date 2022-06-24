@@ -14,8 +14,32 @@ router.get('/', async (req,res) => {
 router.get('/:publicationId/details', async (req,res) => {
 
     const publication = await publicationService.getOneDetailed(req.params.publicationId).lean();
+    const isAuthor = publication.author._id == req.user?._id;
 
-    res.render('publication/details', { ...publication });
+    res.render('publication/details', { ...publication, isAuthor });
+
+});
+
+router.get('/:publicationId/edit', isAuth, async (req,res, next) => {
+
+    const publication = await publicationService.getOne(req.params.publicationId).lean();
+
+    if (publication.author != req.user._id) {
+
+        return next({message: 'You are not authorised!', status: 401});
+
+    }
+
+    res.render('publication/edit', { ...publication });
+
+
+});
+
+router.post('/:publicationId/edit', async (req, res, next) => {
+
+    await publicationService.update(req.params.publicationId, req.body);
+
+    res.redirect(`/publications/${req.params.publicationId}/details`);
 
 })
 
