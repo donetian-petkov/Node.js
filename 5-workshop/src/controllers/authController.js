@@ -20,4 +20,20 @@ router.post('/register', async (req,res) => {
     }
 });
 
+router.get('/login', (req,res) => {
+    res.render('auth/loginPage');
+});
+
+router.post('/login', async (req,res) => {
+
+    let token = await authService.login(req.body);
+
+    if (token) {
+        res.redirect('/')
+    } else {
+        res.redirect('404');
+    }
+
+});
+
 module.exports = router;
