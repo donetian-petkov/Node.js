@@ -1,0 +1,40 @@
+[
+    {
+        "_id": 0,
+        "name": "Gan356 Air SM",
+        "imageUrl": "https://ae01.alicdn.com/kf/HTB1CSddXRxRMKJjy0Fdq6yifFXa6/Gan-356-Air-SM-3x3-Black-Magic-cube-GAN-Air-SM-Magnetic-3x3x3-Speed-cube-gans.jpg",
+        "difficultyLevel": 3
+    },
+    {
+        "_id": 1,
+        "name": "Eco-Dark",
+        "imageUrl": "https://thingsidesire.com/wp-content/uploads/2018/06/Eco-Dark-Rubik%E2%80%99s-Cube2.jpg",
+        "difficultyLevel": 6
+    },
+    {
+        "_id": 2,
+        "name": "Pyraminx",
+        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61izOzq%2BBAL._SY355_.jpg",
+        "difficultyLevel": 1
+    },
+    {
+        "_id": 3,
+        "name": "Megaminx",
+        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61HpQqVQ37L._SY355_.jpg",
+        "difficultyLevel": 3
+    },
+    {
+        "_id": 4,
+        "name": "Classic Rubik",
+        "description": "https://static3.depositphotos.com/1003836/254/i/950/depositphotos_2542915-stock-photo-rubic-cube.jpg",
+        "imageUrl": "https://static3.depositphotos.com/1003836/254/i/950/depositphotos_2542915-stock-photo-rubic-cube.jpg",
+        "difficultyLevel": "5"
+    },
+    {
+        "_id": 5,
+        "name": "new cube",
+        "description": "testing",
+        "imageUrl": "https://thumbs.dreamstime.com/b/rubik-s-cube-more-like-puzzle-gamefor-adults-than-toy-children-solved-rubiks-white-background-84651599.jpg",
+        "difficultyLevel": "1"
+    }
+]
