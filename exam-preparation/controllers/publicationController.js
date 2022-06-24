@@ -3,9 +3,21 @@ const { isAuth } = require('../middlewares/authMiddleware');
 const publicationService = require('../services/publicationService');
 const {errorMapper} = require("../utils/errorMapper");
 
-router.get('/', (req,res) => {
-    res.render('publication');
+router.get('/', async (req,res) => {
+
+    const publications = await publicationService.getAll().lean();
+
+    res.render('publication', { publications });
+
 });
+
+router.get('/:publicationId/details', async (req,res) => {
+
+    const publication = await publicationService.getOneDetailed(req.params.publicationId).lean();
+
+    res.render('publication/details', { ...publication });
+
+})
 
 router.get('/create', isAuth,(req, res) => {
     res.render('publication/create')
