@@ -3,12 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="1ef711d3-1ad5-4232-9918-593ea9d43856" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/authController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/authService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/404.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/404.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/cryptoController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/cryptoController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Crypto.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Crypto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/catalog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/auth/register.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/register.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layouts/main.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1656091092653</updated>
       <workItem from="1656091093894" duration="11084000" />
-      <workItem from="1656137231010" duration="2597000" />
+      <workItem from="1656137231010" duration="4260000" />
     </task>
     <servers />
   </component>

@@ -23,7 +23,7 @@ const cryptoSchema = new mongoose.Schema({
     },
     paymentMethod: {
         type: String,
-        enum:['(crypto-wallet', 'credit-card', 'debit-card', 'paypal'],
+        enum:['crypto-wallet', 'credit-card', 'debit-card', 'paypal'],
         required: true
     },
     cryptoUsers: [
