@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1ef711d3-1ad5-4232-9918-593ea9d43856" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/authController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/cryptoController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/cryptoController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Crypto.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Crypto.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/cryptoService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/cryptoService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/crypto/details.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/crypto/details.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/crypto/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/crypto/edit.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/main.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1656091092653</updated>
       <workItem from="1656091093894" duration="11084000" />
-      <workItem from="1656137231010" duration="8079000" />
+      <workItem from="1656137231010" duration="11889000" />
     </task>
     <servers />
   </component>
