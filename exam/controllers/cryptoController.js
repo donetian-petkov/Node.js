@@ -1,6 +1,7 @@
 const {isAuth} = require("../middlewares/authMiddleware");
 const cryptoService = require('../services/cryptoService');
 const {errorMapper} = require("../utils/errorMapper");
+const {preloadCrypto, isOwner} = require("../middlewares/cryptoMiddlewares");
 const router = require('express').Router();
 
 router.get('/', async (req,res) => {
@@ -32,8 +33,32 @@ router.get('/:cryptoId/details', async (req,res) => {
 
 });
 
-router.get('/:cryptoId/edit',  (req,res) => {
+router.get('/:cryptoId/edit', isAuth, preloadCrypto, isOwner, (req,res, next) => {
 
+
+    const selectedCryptoMethod = {};
+    selectedCryptoMethod[`${req.body.paymentMethod}`] = true;
+
+        res.render('crypto/edit', {...req.crypto, selectedCryptoMethod});
+
+});
+
+router.post('/:cryptoId/edit', isAuth, preloadCrypto, isOwner, async (req,res, next) => {
+
+    try {
+
+        await cryptoService.update(req.params.cryptoId, req.body);
+
+        res.redirect(`/crypto/${req.params.cryptoId}/details`);
+
+    } catch (error) {
+
+        console.log(error);
+
+        res.render('crypto/edit', {...req.body, error: errorMapper(error)});
+
+
+    }
 
 
 });

@@ -10,6 +10,10 @@ const cryptoSchema = new mongoose.Schema({
     image: {
         type: String,
         required: [true, 'The image is required'],
+        validate: {
+            validator: /^http+/,
+            message: 'image should start with http / https'
+        }
     },
     price: {
         type: Number,
@@ -38,9 +42,12 @@ const cryptoSchema = new mongoose.Schema({
     }
 });
 
-cryptoSchema.path('image').validate(function() {
+/*cryptoSchema.path('image').validate(function() {
+
+    console.log(this);
+
     return this.image.startsWith('http');
-}, 'image should be a link!');
+}, 'image should be a link!');*/
 
 const Crypto = mongoose.model('Crypto', cryptoSchema);
 
