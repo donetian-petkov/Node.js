@@ -2,12 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ef711d3-1ad5-4232-9918-593ea9d43856" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/authController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/cryptoController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/cryptoController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/cryptoService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/cryptoService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/crypto/details.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/crypto/details.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/main.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/static/css/404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/static/css/catalog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/static/css/create.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/static/css/details.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/static/css/edit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/static/css/home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/static/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/static/css/register.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/static/css/search.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/static/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/static/images/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/static/images/bitcoin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/static/images/dogecoin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/static/images/ethereum.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/static/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/jwt.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1656091092653</updated>
       <workItem from="1656091093894" duration="11084000" />
-      <workItem from="1656137231010" duration="11889000" />
+      <workItem from="1656137231010" duration="12228000" />
     </task>
     <servers />
   </component>
