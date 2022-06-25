@@ -3,8 +3,39 @@ const cryptoService = require('../services/cryptoService');
 const {errorMapper} = require("../utils/errorMapper");
 const router = require('express').Router();
 
-router.get('/', (req,res) => {
-    res.render('crypto');
+router.get('/', async (req,res) => {
+
+    try {
+        const cryptos = await cryptoService.getAll().lean();
+
+        res.render('crypto', {cryptos});
+
+    } catch (error) {
+
+        res.render('crypto', { error: errorMapper(error)});
+    }
+
+});
+
+router.get('/:cryptoId/details', async (req,res) => {
+
+    try {
+        const crypto = await cryptoService.getOneDetailed(req.params.cryptoId).lean();
+        const isOwner = crypto.owner._id == req.user?._id;
+        const isPurchased = crypto.cryptoUsers.join(',').includes(req.user?._id);
+        res.render('crypto/details', {...crypto, isOwner, isPurchased});
+    } catch (error) {
+
+        res.render('crypto/details', {error: errorMapper(error)});
+
+    }
+
+});
+
+router.get('/:cryptoId/edit',  (req,res) => {
+
+
+
 });
 
 router.get('/create', isAuth, (req,res) => {
