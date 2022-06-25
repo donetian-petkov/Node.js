@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ef711d3-1ad5-4232-9918-593ea9d43856" name="Changes" comment="" />
+    <list default="true" id="1ef711d3-1ad5-4232-9918-593ea9d43856" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/authController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/authService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/404.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/404.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/main.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.hbs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1656091092653</updated>
       <workItem from="1656091093894" duration="11084000" />
-      <workItem from="1656137231010" duration="892000" />
+      <workItem from="1656137231010" duration="2597000" />
     </task>
     <servers />
   </component>
